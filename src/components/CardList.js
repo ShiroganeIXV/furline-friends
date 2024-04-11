@@ -15,6 +15,11 @@ const CardList = ({ robots }) => {
         email={robot.email} />
     });
 
+    // Test ErrorBoundary
+    // if (true){
+    //     throw new Error('Nooooo!');
+    // }
+
     // return the card components
     return (
         // React.Fragment

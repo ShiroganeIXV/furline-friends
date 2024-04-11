@@ -3,6 +3,7 @@ import CardList from '../components/CardList';
 // import {robots} from './robots'; // destructuring the robots array from robots.js because it's the default export
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
+import ErrorBoundary from './ErrorBoundary';
 
 
 class App extends Component {
@@ -64,7 +65,9 @@ class App extends Component {
 
                     {/* This is a wrapper component that will wrap the CardList component */}
                     <Scroll> 
-                        <CardList robots={filteredCats} />
+                        <ErrorBoundary>
+                            <CardList robots={filteredCats} />
+                        </ErrorBoundary>
                     </Scroll>
                     
                 </div>
